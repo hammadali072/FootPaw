@@ -1,0 +1,274 @@
+@import '../../common-style/variables.scss';
+
+.header_main {
+    padding-block: 30px;
+
+    .container {
+        .header_inr {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .menu_icon_otr {
+                @media (min-width: 991.98px) {
+                    display: none;
+                }
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                border-radius: 8px;
+                border: 1px solid $Border;
+                transition: all 0.3s linear;
+                cursor: pointer;
+
+                @media (max-width: 420px) {
+                    padding: 8px;
+                }
+
+                .icon {
+                    width: 32px;
+                    height: auto;
+                    color: $Accent;
+                    transition: all 0.3s linear;
+
+                    @media (max-width: 575.98px) {
+                        width: 28px;
+                    }
+
+                    @media (max-width: 420px) {
+                        width: 24px;
+                    }
+
+                }
+
+                &:hover {
+                    background-color: $Secondary;
+                    border: 1px solid $Secondary;
+
+                    .icon {
+                        color: $White;
+                    }
+                }
+            }
+
+            .shoppingBag_icon_otr {
+                @media (min-width: 991.98px) {
+                    display: none;
+                }
+
+                @media (max-width: 575.98px) {
+                    padding: 10px;
+                    border-radius: 8px;
+                }
+
+                padding: 14px;
+                border: 1px solid $Border;
+                border-radius: 18px;
+                transition: all 0.3s;
+                cursor: pointer;
+
+                .icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 24px;
+                    height: auto;
+                    color: $Accent;
+                    transition: all 0.3s linear;
+
+                    @media (max-width: 575.98px) {
+                        width: 22px;
+                    }
+                }
+
+                &:hover {
+                    background-color: $Secondary;
+                    border: 1px solid $Secondary;
+
+                    .icon {
+                        color: $White;
+                    }
+                }
+
+            }
+
+            .logo_main {
+                .logo_otr {
+                    .logo_img {
+                        width: 195px;
+                        height: auto;
+                        object-fit: contain;
+
+                        @media (max-width: 991.98px) {
+                            width: 180px;
+                        }
+
+                        @media (max-width: 575.98px) {
+                            width: 160px;
+                        }
+
+                        @media (max-width: 420px) {
+                            width: 120px;
+                        }
+                    }
+                }
+            }
+
+            .menu_otr {
+                @media (max-width: 991.98px) {
+                    display: none;
+                }
+
+                .menu_ul {
+                    display: flex;
+                    align-items: center;
+                    gap: 0 32px;
+
+                    @media (max-width: 1199px) {
+                        gap: 0 24px;
+                    }
+
+                    .menu_li {
+                        position: relative;
+
+                        .menu_a {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 0 6px;
+                            color: $Accent;
+                            transition: all 0.3s linear;
+
+                            .icon {
+                                width: 12px;
+                                height: auto;
+                                color: $Text_light;
+                                transition: all 0.3s;
+                            }
+
+                            &:hover {
+                                color: $Primary;
+
+                                .icon {
+                                    color: $Primary;
+                                }
+                            }
+                        }
+
+                        .menu_dropdown_otr {
+                            position: absolute;
+                            top: 20px;
+                            left: 0;
+                            padding-top: 20px;
+                            visibility: hidden;
+                            opacity: 0;
+                            transform: translateY(15px);
+                            transition: all 0.2s linear;
+
+                            .menu_dropdown_inr {
+                                width: 250px;
+                                background-color: $White;
+                                box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+                                padding: 30px;
+                                border-radius: 8px;
+
+                                .menu_dropdown_ul {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    gap: 8px 0;
+
+                                    .menu_dropdown_li {
+                                        .menu_dropdown_a {
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 0 12px;
+                                            color: $Text;
+                                            transition: all 0.3s linear;
+
+                                            .icon {
+                                                width: 18px;
+                                                height: auto;
+                                                transform: rotate(-90deg);
+                                            }
+
+                                            &:hover {
+                                                color: $Primary;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            .menu_a {
+                                color: $Primary;
+
+                                .icon {
+                                    color: $Primary;
+                                }
+                            }
+
+                            .menu_dropdown_otr {
+                                visibility: visible;
+                                opacity: 1;
+                                z-index: 1;
+                                transform: translateY(0px);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .action_main {
+                @media (max-width: 991.98px) {
+                    display: none;
+                }
+
+                .action_ul {
+                    display: flex;
+                    align-items: center;
+                    gap: 0 16px;
+
+                    .action_li {
+                        .action_otr {
+
+                            .action_a {
+                                padding: 14px;
+                                border: 1px solid $Border;
+                                border-radius: 18px;
+                                transition: all 0.3s;
+
+                                .action_icon {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 20px;
+                                    height: auto;
+                                    color: $Accent;
+                                    transition: all 0.3s linear;
+
+                                    @media (max-width: 1199.98px) {
+                                        width: 18px;
+                                    }
+                                }
+
+                                &:hover {
+                                    background-color: $Secondary;
+                                    border: 1px solid $Secondary;
+
+                                    .action_icon {
+                                        color: $White;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
