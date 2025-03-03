@@ -1,0 +1,174 @@
+@import '../../common-style/variables.scss';
+
+.footer_main {
+    background-color: $Secondary;
+
+    .container {
+        .footer_inr {
+            padding-block: 140px 90px;
+
+            .logo_contacts_otr {
+                justify-content: space-between;
+                align-items: center;
+
+                .col_logo_otr {
+                    .logo_main {
+                        .logo_otr {
+                            .logo_img {
+                                width: 195px;
+                                height: auto;
+                                object-fit: contain;
+
+                                @media (max-width: 991.98px) {
+                                    width: 180px;
+                                }
+
+                                @media (max-width: 575.98px) {
+                                    width: 160px;
+                                }
+
+                                @media (max-width: 420px) {
+                                    width: 120px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .col_contacts_otr {
+                    .col_contacts_inr {
+                        .row {
+                            align-items: center;
+
+                            .col_contact_otr {
+                                .col_contact_inr {
+
+                                    .row {
+                                        .contact_icon_otr {
+                                            width: 56px;
+                                            height: 56px;
+                                            background-color: $White;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            border-radius: 100%;
+
+                                            .contact_icon {
+                                                width: 22px;
+                                                height: 22px;
+                                                color: $Primary;
+                                                transition: all 0.3s linear;
+                                            }
+
+                                            &:hover {
+                                                background-color: $Primary;
+
+                                                .contact_icon {
+                                                    color: $White;
+                                                }
+                                            }
+                                        }
+
+                                        .col_content_otr {
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: center;
+                                            gap: 0 0;
+
+                                            .contact_title {
+                                                color: $White;
+                                            }
+
+                                            .contact_a {
+                                                color: $White;
+                                                transition: all 0.3s linear;
+
+                                                &:hover {
+                                                    color: $Primary;
+                                                }
+                                            }
+
+                                            .social_otr {
+                                                .social_ul {
+                                                    display: flex;
+                                                    justify-content: space-between;
+                                                    align-items: center;
+                                                    gap: 0 14px;
+
+                                                    .social_li {
+                                                        .social_a {
+                                                            .social_icon {
+                                                                width: 24px;
+                                                                height: auto;
+                                                                color: $White;
+                                                                transition: all 0.3s linear;
+
+                                                                &:hover {
+                                                                    color: $Primary;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    .copyright_otr {
+        background-color: $Secondary-hover;
+        padding-block: 40px;
+
+        .container {
+            .copyright_inr {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .copyright_text {
+                    display: flex;
+                    color: $Text-light;
+
+                    .copyright_inr {
+                        color: $White;
+                        padding-left: 4px;
+                        transition: all 0.3s linear;
+
+                        &:hover {
+                            color: $Primary;
+                        }
+                    }
+                }
+
+                .copyrights_otr {
+                    .copyrights_ul {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0 14px;
+
+                        .copyright_li {
+                            .copyright_a {
+                                color: $Text-light;
+                                transition: all 0.3s linear;
+
+                                &:hover {
+                                    color: $White;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

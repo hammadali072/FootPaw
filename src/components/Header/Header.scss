@@ -1,13 +1,297 @@
 @import '../../common-style/variables.scss';
 
+.menu_overlay_main {
+    .offcanvas {
+        .container {
+            .overlay {
+                padding: 20px 10px;
+
+                .logo_main {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .logo_otr {
+                        .logo_img {
+                            width: 180px;
+                            height: auto;
+
+                            @media (max-width: 575.98px) {
+                                width: 160px;
+                            }
+
+                            @media (max-width: 420px) {
+                                width: 120px;
+                            }
+                        }
+                    }
+
+                    .close_icon_otr {
+                        .icon {
+                            width: 24px;
+                            height: auto;
+                            cursor: pointer;
+                            transition: all 0.3s linear;
+
+                            &:hover {
+                                color: $Primary;
+                            }
+                        }
+                    }
+                }
+
+                .accordion {
+
+                    .menu_otr {
+                        padding-block: 12px;
+
+                        .menu_ul {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 4px 0;
+
+                            .menu_li {
+
+                                .accordion-item {
+                                    border-radius: 0;
+                                    border: none;
+
+                                    .accordion-header {
+
+                                        .accordion-button {
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-between;
+                                            padding: 0;
+                                            border-radius: 0;
+                                            border: none;
+                                            box-shadow: none;
+                                            background-color: $White;
+
+                                            .menu_text {
+                                                color: $Accent;
+                                                transition: all .3s linear;
+                                            }
+
+                                            .dropdown_icon {
+                                                width: 18px;
+                                                height: auto;
+                                                color: $Accent;
+                                                transition: all .3s linear;
+                                            }
+
+                                            &:not(.collapsed) {
+
+                                                .menu_text {
+                                                    color: $Accent;
+                                                }
+
+                                                .dropdown_icon {
+                                                    color: $Accent;
+                                                    transform: rotate(90deg);
+                                                }
+                                            }
+
+                                            &:hover {
+                                                .menu_text {
+                                                    color: $Primary;
+                                                }
+
+                                                .dropdown_icon {
+                                                    color: $Primary;
+                                                }
+                                            }
+
+                                            &::after {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+
+                                    .accordion-collapse {
+                                        .accordion-body {
+                                            .menu_dropdown_ul {
+                                                display: flex;
+                                                flex-direction: column;
+                                                align-items: flex-start;
+                                                gap: 8px 0;
+
+                                                .menu_dropdown_li {
+                                                    .menu_dropdown_a {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        gap: 0 12px;
+                                                        color: $Text;
+                                                        transition: all 0.3s linear;
+
+                                                        .icon {
+                                                            width: 18px;
+                                                            height: auto;
+                                                            transform: rotate(-90deg);
+                                                        }
+
+                                                        &:hover {
+                                                            color: $Primary;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .menu_a {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 0 6px;
+                                    color: $Accent;
+                                    transition: all 0.3s linear;
+
+                                    .icon {
+                                        width: 12px;
+                                        height: auto;
+                                        color: $Text_light;
+                                        transition: all 0.3s;
+                                    }
+
+                                    &:hover {
+                                        color: $Primary;
+
+                                        .icon {
+                                            color: $Primary;
+                                        }
+                                    }
+                                }
+
+
+                                &:hover {
+                                    .menu_a {
+                                        color: $Primary;
+
+                                        .icon {
+                                            color: $Primary;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.shopping_overlay_main {
+    .offcanvas {
+        .container {
+            .overlay {
+                padding: 20px 10px;
+
+                .title_otr {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .title {
+                        color: $Accent;
+                    }
+
+                    .close_icon_otr {
+                        .icon {
+                            width: 24px;
+                            height: auto;
+                            cursor: pointer;
+                            transition: all 0.3s linear;
+
+                            &:hover {
+                                color: $Primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@keyframes slider {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+
+}
+
 .header_main {
-    padding-block: 30px;
+
+    .alert_otr {
+        .alert_inr {
+            padding-block: 14px;
+            background-color: $Secondary;
+
+            overflow: hidden;
+
+            .Slider {
+                display: flex;
+                gap: 0 14px;
+                align-items: center;
+                width: 1000%;
+
+                @media (max-width: 575.98px) {
+                    gap: 0 12px;
+                }
+
+                &:hover {
+                    .Slider_inr {
+                        animation-play-state: paused;
+                    }
+                }
+
+                .Slider_inr {
+                    display: flex;
+                    gap: 0 14px;
+                    align-items: center;
+                    flex-wrap: nowrap;
+                    animation: slider 20s linear infinite;
+
+                    @media (max-width: 575.98px) {
+                        gap: 0 12px;
+                    }
+
+                    .icon_otr {
+                        .icon {
+                            color: $White;
+                            width: 18px;
+                            height: auto;
+                            transform: rotate(-90deg);
+                        }
+                    }
+
+                    .text {
+                        color: $White;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
 
     .container {
         .header_inr {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding-block: 30px;
+
+            @media (max-width: 1199px) {
+                padding-block: 20px;
+            }
 
             .menu_icon_otr {
                 @media (min-width: 991.98px) {
@@ -130,6 +414,7 @@
                         gap: 0 24px;
                     }
 
+
                     .menu_li {
                         position: relative;
 
@@ -224,6 +509,7 @@
             }
 
             .action_main {
+
                 @media (max-width: 991.98px) {
                     display: none;
                 }
@@ -234,6 +520,7 @@
                     gap: 0 16px;
 
                     .action_li {
+
                         .action_otr {
 
                             .action_a {
@@ -241,6 +528,10 @@
                                 border: 1px solid $Border;
                                 border-radius: 18px;
                                 transition: all 0.3s;
+
+                                @media (max-width: 991.98px) {
+                                    padding: 10px;
+                                }
 
                                 .action_icon {
                                     display: flex;
@@ -253,6 +544,10 @@
 
                                     @media (max-width: 1199.98px) {
                                         width: 18px;
+                                    }
+
+                                    @media (max-width: 991.98px) {
+                                        width: 22px;
                                     }
                                 }
 
