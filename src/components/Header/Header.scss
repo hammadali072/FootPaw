@@ -234,14 +234,13 @@
         .alert_inr {
             padding-block: 14px;
             background-color: $Secondary;
-
             overflow: hidden;
 
             .Slider {
                 display: flex;
                 gap: 0 14px;
                 align-items: center;
-                width: 1000%;
+                flex-wrap: nowrap;
 
                 @media (max-width: 575.98px) {
                     gap: 0 12px;
@@ -276,6 +275,7 @@
                     .text {
                         color: $White;
                         text-transform: uppercase;
+                        text-wrap: nowrap;
                     }
                 }
             }

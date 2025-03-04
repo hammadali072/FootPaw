@@ -1,34 +1,57 @@
 @import '../../common-style/variables.scss';
 
 .footer_main {
-    background-color: $Secondary;
+    background-color: $Secondary-dark;
 
     .container {
         .footer_inr {
             padding-block: 140px 90px;
 
+            @media (max-width: 1199px) {
+                padding-block: 120px 90px;
+            }
+
+            @media (max-width: 991.98px) {
+                padding-block: 90px;
+            }
+
+            @media (max-width: 575.98px) {
+                padding-block: 60px;
+            }
+
             .logo_contacts_otr {
                 justify-content: space-between;
                 align-items: center;
+                gap: 40px 0;
+                padding-bottom: 60px;
+                border-bottom: 1px solid $Text;
+
+                @media (max-width: 991.98px) {
+                    padding-bottom: 40px;
+                }
 
                 .col_logo_otr {
-                    .logo_main {
-                        .logo_otr {
-                            .logo_img {
-                                width: 195px;
-                                height: auto;
-                                object-fit: contain;
+                    .col_logo_inr {
+                        .logo_main {
+                            @media (max-width: 991.98px) {
+                                text-align: center;
+                            }
 
-                                @media (max-width: 991.98px) {
-                                    width: 180px;
-                                }
+                            .logo_otr {
 
-                                @media (max-width: 575.98px) {
-                                    width: 160px;
-                                }
+                                .logo_img {
+                                    width: 195px;
+                                    height: auto;
+                                    object-fit: contain;
 
-                                @media (max-width: 420px) {
-                                    width: 120px;
+                                    @media (max-width: 575.98px) {
+                                        width: 180px;
+                                    }
+
+                                    @media (max-width: 420px) {
+                                        width: 160px;
+                                    }
+
                                 }
                             }
                         }
@@ -36,77 +59,107 @@
                 }
 
                 .col_contacts_otr {
+
+
                     .col_contacts_inr {
-                        .row {
-                            align-items: center;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 20px 0;
 
-                            .col_contact_otr {
-                                .col_contact_inr {
+                        .col_contact_otr {
+                            @media (max-width: 575.98px) {
+                                flex: 1 1 50%;
+                            }
 
-                                    .row {
-                                        .contact_icon_otr {
-                                            width: 56px;
-                                            height: 56px;
-                                            background-color: $White;
-                                            display: flex;
-                                            justify-content: center;
-                                            align-items: center;
-                                            border-radius: 100%;
+                            .col_contact_inr {
+                                justify-content: space-between;
+                                gap: 12px 0;
 
-                                            .contact_icon {
-                                                width: 22px;
-                                                height: 22px;
-                                                color: $Primary;
-                                                transition: all 0.3s linear;
-                                            }
+                                @media (max-width: 991.98px) {
+                                    flex-direction: column;
+                                    align-items: center;
+                                    text-align: center;
+                                }
 
-                                            &:hover {
-                                                background-color: $Primary;
+                                @media (max-width: 767.98px) {
+                                    flex-wrap: wrap;
+                                }
 
-                                                .contact_icon {
-                                                    color: $White;
-                                                }
-                                            }
+                                .contact_icon_otr {
+                                    width: 56px;
+                                    height: 56px;
+                                    background-color: $White;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 100%;
+
+                                    @media (max-width: 991.98px) {
+                                        width: 50px;
+                                        height: 50px;
+                                    }
+
+                                    .contact_icon {
+                                        width: 22px;
+                                        height: auto;
+                                        color: $Primary;
+                                        transition: all 0.3s linear;
+
+                                        @media (max-width: 991.98px) {
+                                            width: 20px;
+                                            height: auto;
                                         }
+                                    }
 
-                                        .col_content_otr {
+                                    &:hover {
+                                        background-color: $Primary;
+
+                                        .contact_icon {
+                                            color: $White;
+                                        }
+                                    }
+                                }
+
+                                .col_content_otr {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-between;
+                                    gap: 2px 0;
+
+                                    .contact_title {
+                                        color: $White;
+                                    }
+
+                                    .contact_a {
+                                        color: $White;
+                                        transition: all 0.3s linear;
+
+                                        &:hover {
+                                            color: $Primary;
+                                        }
+                                    }
+
+                                    .social_otr {
+                                        .social_ul {
                                             display: flex;
-                                            flex-direction: column;
-                                            justify-content: center;
-                                            gap: 0 0;
+                                            justify-content: space-between;
+                                            align-items: center;
+                                            gap: 0 12px;
 
-                                            .contact_title {
-                                                color: $White;
+                                            @media (max-width: 575.98px) {
+                                                justify-content: space-evenly;
                                             }
 
-                                            .contact_a {
-                                                color: $White;
-                                                transition: all 0.3s linear;
+                                            .social_li {
+                                                .social_a {
+                                                    .social_icon {
+                                                        width: 20px;
+                                                        height: auto;
+                                                        color: $White;
+                                                        transition: all 0.3s linear;
 
-                                                &:hover {
-                                                    color: $Primary;
-                                                }
-                                            }
-
-                                            .social_otr {
-                                                .social_ul {
-                                                    display: flex;
-                                                    justify-content: space-between;
-                                                    align-items: center;
-                                                    gap: 0 14px;
-
-                                                    .social_li {
-                                                        .social_a {
-                                                            .social_icon {
-                                                                width: 24px;
-                                                                height: auto;
-                                                                color: $White;
-                                                                transition: all 0.3s linear;
-
-                                                                &:hover {
-                                                                    color: $Primary;
-                                                                }
-                                                            }
+                                                        &:hover {
+                                                            color: $Primary;
                                                         }
                                                     }
                                                 }
@@ -120,23 +173,236 @@
                 }
             }
 
-        }
+            .links_newsletter_otr {
+                padding-top: 60px;
+                gap: 40px 0;
 
+                @media (max-width: 991.98px) {
+                    padding-top: 40px;
+                }
+
+                .col_links_otr {
+                    .col_links_inr {
+                        gap: 40px 0;
+
+                        @media (max-width: 420px) {
+                            gap: 24px 0;
+                        }
+
+                        .col_link_otr {
+                            @media (max-width: 575.98px) and (min-width: 420px) {
+                                flex: 1 1 50%;
+                            }
+
+                            .col_link_inr {
+                                .heading {
+                                    color: $White;
+                                    text-transform: uppercase;
+                                    margin-bottom: 18px;
+
+                                    @media (max-width: 420px) {
+                                        margin-bottom: 12px;
+                                    }
+                                }
+
+                                .menu_otr {
+                                    .menu_ul {
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 12px 0;
+
+                                        @media (max-width: 420px) {
+                                            gap: 6px 0;
+                                        }
+
+                                        .menu_li {
+                                            .menu_a {
+                                                color: $White;
+                                                text-transform: capitalize;
+                                                transition: all 0.3s linear;
+                                                position: relative;
+
+                                                &::after {
+                                                    content: "";
+                                                    width: 100%;
+                                                    height: 1px;
+                                                    background-color: $White;
+                                                    position: absolute;
+                                                    bottom: 0;
+                                                    left: 0;
+                                                    visibility: hidden;
+                                                    opacity: 0;
+                                                    transition: all 0.3s linear;
+                                                    transform: scaleX(0.5);
+                                                    transform-origin: left;
+                                                }
+
+                                                &:hover {
+                                                    &::after {
+                                                        transform: scaleX(1);
+                                                        visibility: visible;
+                                                        opacity: 1;
+                                                    }
+                                                }
+
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .col_newsletter_otr {
+                    .col_newsletter_inr {
+                        padding: 50px 50px 0;
+                        border-radius: 20px;
+                        background-image: url(../../images/ft1-bg.jpg);
+                        background-position: top center;
+
+                        @media (max-width: 1199px) {
+                            padding: 25px 25px 0;
+                        }
+
+                        .content_otr {
+                            .heading {
+                                color: $White;
+                            }
+
+                            .desc {
+                                color: $White;
+                                margin-block: 10px;
+                            }
+
+                            .form_otr {
+                                .input_main {
+                                    position: relative;
+
+                                    .input_otr {
+                                        background-color: $White;
+                                        border-radius: 8px;
+                                        border: 1px solid $Border;
+                                        transition: all 0.3s linear;
+
+                                        &:focus-within {
+                                            border: 1px solid $Primary;
+                                        }
+
+                                        .input_email {
+                                            padding: 10px 20px;
+                                            border: none;
+                                            background: none;
+                                            width: calc(100% - 30px);
+
+                                            @media (max-width: 420px) {
+                                                padding: 10px;
+                                            }
+
+                                            &:focus {
+                                                outline: none;
+                                            }
+                                        }
+
+
+                                    }
+
+                                    .btn_otr {
+                                        position: absolute;
+                                        top: 50%;
+                                        right: 15px;
+                                        transform: translateY(-50%);
+
+                                        .submit_btn {
+                                            border: none;
+                                            background: none;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+
+                                            .icon {
+                                                width: 20px;
+                                                height: 20px;
+                                                color: $Primary;
+                                                transition: all 0.3s linear;
+                                            }
+
+                                            &:hover {
+                                                .icon {
+                                                    color: $Accent;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .img_otr {
+                                text-align: right;
+                                position: relative;
+
+                                @media (max-width: 991.98px) {
+                                    text-align: center;
+                                }
+
+                                .pet_img {
+                                    margin-top: 24px;
+                                    max-width: 100%;
+                                    height: 100%;
+                                    object-fit: contain;
+                                }
+
+                                .bone_img {
+                                    position: absolute;
+                                    bottom: 50%;
+                                    right: -6%;
+                                    transform: translate(6%, -50%);
+
+                                    @media (max-width: 991.98px) {
+                                        right: 6%;
+                                        transform: translate(-6%, -50%);
+                                    }
+                                }
+
+                                .fp_img {
+                                    position: absolute;
+                                    bottom: 55%;
+                                    left: 1.5%;
+                                    transform: translate(-1.5%, -55%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .copyright_otr {
-        background-color: $Secondary-hover;
+        background-color: rgba($color: #000000, $alpha: 0.33);
         padding-block: 40px;
+
+        @media (max-width: 991.98px) {
+            padding-block: 20px;
+        }
 
         .container {
             .copyright_inr {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                flex-wrap: wrap;
+                gap: 12px;
+
+                @media (max-width: 991.98px) {
+                    justify-content: center;
+                }
 
                 .copyright_text {
                     display: flex;
+                    flex-wrap: wrap;
                     color: $Text-light;
+                    justify-content: center;
 
                     .copyright_inr {
                         color: $White;
@@ -149,11 +415,20 @@
                     }
                 }
 
+                .payment_companies {
+                    .companies_img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+
                 .copyrights_otr {
                     .copyrights_ul {
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        flex-wrap: wrap;
                         gap: 0 14px;
 
                         .copyright_li {
